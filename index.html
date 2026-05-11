@@ -618,6 +618,62 @@
     .edu-courses strong { color: var(--text); }
 
     /* =============================================
+       PUBLICATIONS
+    ============================================= */
+    .pub-card {
+      display: flex;
+      gap: 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.8rem;
+      transition: border-color .2s, transform .2s;
+      color: var(--text);
+    }
+    .pub-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+
+    .pub-left {
+      font-size: 1.5rem;
+      color: var(--accent);
+      padding-top: .2rem;
+      min-width: 28px;
+    }
+
+    .pub-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: .5rem;
+      line-height: 1.5;
+    }
+
+    .pub-meta {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .8rem;
+      color: var(--muted);
+      margin-bottom: .75rem;
+      flex-wrap: wrap;
+    }
+
+    .pub-abstract {
+      font-size: .88rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: .9rem;
+    }
+
+    .pub-link {
+      font-size: .8rem;
+      color: var(--accent2);
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+    }
+
+    /* =============================================
        CERTIFICATIONS
     ============================================= */
     .cert-list {
@@ -820,30 +876,21 @@
           <strong>Scala Teams</strong>, I focus on e-commerce intelligence — improving search relevance,
           personalization, and automation.
         </p>
-        <p>
-          Outside of work, I'm driven by curiosity: whether it's reading AI papers, contributing to
-          projects, or exploring new ways to make models more efficient.
-        </p>
       </div>
       <div class="about-card">
         <div class="about-stat">
-          <div class="num">1+</div>
+          <div class="num">2+</div>
           <div class="label">Years Experience</div>
         </div>
         <div class="stat-divider"></div>
         <div class="about-stat">
-          <div class="num">96%</div>
-          <div class="label">Compute Reduction</div>
+          <div class="num">10+</div>
+          <div class="label">Projects</div>
         </div>
         <div class="stat-divider"></div>
         <div class="about-stat">
-          <div class="num">27%</div>
-          <div class="label">CTR Improvement</div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="about-stat">
-          <div class="num">3</div>
-          <div class="label">Certifications</div>
+          <div class="num">1</div>
+          <div class="label">Publication</div>
         </div>
       </div>
     </div>
@@ -877,6 +924,20 @@
           <span class="tag">LLMs</span>
           <span class="tag">NLP</span>
           <span class="tag">Knowledge Distillation</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal">
+        <div class="skill-group-title"><i class="fa-solid fa-diagram-project"></i> AI Agents</div>
+        <div class="tags">
+          <span class="tag">LangChain</span>
+          <span class="tag">LangGraph</span>
+          <span class="tag">Google ADK</span>
+          <span class="tag">MCP</span>
+          <span class="tag">Multi-Agent Systems</span>
+          <span class="tag">Vertex AI</span>
+          <span class="tag">Agentic Workflows</span>
+          <span class="tag">Human-in-the-Loop</span>
         </div>
       </div>
 
@@ -949,6 +1010,7 @@
             <li>Improved and evaluated a <strong>neural search model</strong> using embedding-based and semantic search techniques, achieving a <strong>MAP score of 0.67</strong> and <strong>NDCG score of 0.7</strong>.</li>
             <li>Developed a <strong>recommendation model</strong> for alternate and visually similar items, improving user engagement by <strong>15%</strong> and increasing click-through rates by <strong>27%</strong>.</li>
             <li>Leveraged ML and NLP techniques to <strong>automate e-commerce services</strong>, reducing manual effort and significantly boosting operational efficiency.</li>
+            <li>Built and maintained <strong>multi-agent AI systems</strong> using LangChain and LangGraph for workflow automation, leveraging hierarchical agent architectures with intent classification and domain-based routing.</li>
           </ul>
         </div>
       </div>
@@ -1022,6 +1084,39 @@
           <span class="tool-tag">Flutter</span>
           <span class="tool-tag">BitBucket</span>
         </div>
+        <a href="https://ieeexplore.ieee.org/document/10863400" target="_blank" style="display:inline-flex; align-items:center; gap:.4rem; font-size:.8rem; color:var(--accent2); margin-top:.25rem;">
+          <i class="fa-solid fa-file-lines"></i> IEEE Publication
+        </a>
+      </div>
+
+      <!-- Project: AI Agents -->
+      <div class="project-card reveal">
+        <div class="project-icon"><i class="fa-solid fa-diagram-project"></i></div>
+        <div>
+          <span class="project-name">PIM Workflow Automation Agent</span>
+        </div>
+        <p class="project-desc">
+          Multi-agent system automating Product Information Management (PIM) workflows via
+          natural language. Hierarchical architecture with a root coordinator routing to domain
+          agents (Attributes, Attribute Groups, Product Templates) — each with intent classification,
+          semantic search, and CRUD execution. Includes human-in-the-loop approval for sensitive
+          operations and MCP tool integration.
+        </p>
+        <div class="project-metrics">
+          <span class="metric">Multiple domain coordinators</span>
+          <span class="metric">Human-in-the-Loop</span>
+          <span class="metric">MCP integrated</span>
+        </div>
+        <div class="project-tools">
+          <span class="tool-tag">LangGraph</span>
+          <span class="tool-tag">LangChain</span>
+          <span class="tool-tag">Google ADK</span>
+          <span class="tool-tag">Vertex AI</span>
+          <span class="tool-tag">GCP</span>
+          <span class="tool-tag">Python</span>
+          <span class="tool-tag">Docker</span>
+          <span class="tool-tag">Kubernetes</span>
+        </div>
       </div>
 
       <!-- Project 2 -->
@@ -1077,14 +1172,55 @@
       </div>
     </div>
 
+    <!-- Publications subsection -->
+    <h3 style="font-size:.85rem; font-weight:600; color:var(--muted); margin: 3rem 0 1.5rem; text-transform:uppercase; letter-spacing:.08em;">
+      Publications
+    </h3>
+    <div class="reveal">
+      <a href="https://ieeexplore.ieee.org/document/10863400" target="_blank" class="pub-card">
+        <div class="pub-left">
+          <i class="fa-solid fa-file-lines"></i>
+        </div>
+        <div class="pub-body">
+          <div class="pub-title">
+            A Light-Weight Image to Description Model Using Knowledge Distillation
+          </div>
+          <div class="pub-meta">
+            <span><i class="fa-brands fa-ieee"></i> IEEE AIBThings 2024</span>
+            <span>·</span>
+            <span>Sep 2024</span>
+            <span>·</span>
+            <span>Mt Pleasant, MI, USA</span>
+            <span>·</span>
+            <span style="color:var(--green);">DOI: 10.1109/AIBThings63359.2024.10863400</span>
+          </div>
+          <div class="pub-abstract">
+            Lightweight model for automating e-commerce product cataloging by generating descriptions from images.
+            Applied fine-tuning and knowledge distillation on LLaMA2 (7B) to produce a 247M-parameter student model
+            achieving F1 of 0.836 with 96% compute reduction and 88% faster inference.
+          </div>
+          <span class="pub-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> View on IEEE Xplore</span>
+        </div>
+      </a>
+    </div>
+
     <!-- Certifications subsection -->
     <h3 style="font-size:1.1rem; font-weight:600; color:var(--muted); margin: 3rem 0 1.5rem; text-transform:uppercase; letter-spacing:.08em; font-size:.85rem;">
       Certifications
     </h3>
     <div class="cert-list reveal">
-      <div class="cert-item"><i class="fa-brands fa-microsoft"></i> AZ-900 Azure Fundamentals</div>
-      <div class="cert-item"><i class="fa-brands fa-aws"></i> AWS Academy Cloud Foundations</div>
-      <div class="cert-item"><i class="fa-solid fa-flask"></i> Unit Testing &amp; Test-Driven Programming</div>
+      <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/" target="_blank" class="cert-item">
+        <i class="fa-brands fa-microsoft"></i> AZ-900 Azure Fundamentals
+        <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:.65rem; margin-left:auto; color:var(--muted);"></i>
+      </a>
+      <a href="https://aws.amazon.com/training/awsacademy/" target="_blank" class="cert-item">
+        <i class="fa-brands fa-aws"></i> AWS Academy Cloud Foundations
+        <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:.65rem; margin-left:auto; color:var(--muted);"></i>
+      </a>
+      <a href="https://www.coursera.org/learn/unit-testing-and-test-driven-development-in-c" target="_blank" class="cert-item">
+        <i class="fa-solid fa-flask"></i> Unit Testing &amp; Test-Driven Programming
+        <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:.65rem; margin-left:auto; color:var(--muted);"></i>
+      </a>
     </div>
 
   </section>
@@ -1103,6 +1239,9 @@
       <div class="contact-links">
         <a href="mailto:eisha.rehan27@gmail.com" class="contact-link">
           <i class="fa-solid fa-envelope"></i> eisha.rehan27@gmail.com
+        </a>
+        <a href="tel:+923108326844" class="contact-link">
+          <i class="fa-solid fa-phone"></i> +92 310 832 6844
         </a>
         <a href="https://linkedin.com/in/eisha-rehan/" target="_blank" class="contact-link">
           <i class="fa-brands fa-linkedin"></i> LinkedIn
